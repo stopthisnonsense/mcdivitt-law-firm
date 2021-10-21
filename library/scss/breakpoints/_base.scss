@@ -1,0 +1,858 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Base Stylesheet
+
+As the name implies, this is the base stylesheet. This will be
+loaded by all devices and viewports so keep it as light as possible.
+
+If you are using progressive enhancement, load styles that will be
+only seen on tablets or desktops in the stylesheets targeted for
+those viewpoints.
+
+******************************************************************/
+
+//floating frog
+#masthead { padding-bottom: 150px; }
+
+#floating-frog {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 195px;
+	margin-left: -97px;
+	z-index: 10;
+	text-decoration: none;
+	color: #fff;
+
+	.mcdfrog {
+		position: relative;
+		width: 100%;
+		height: 170px;
+		margin-bottom: 5px;
+		background: url("../../images/mcribbit.png") no-repeat top center;
+		background-size: 95%;
+	}
+
+	>.fbutton {
+		display: block;
+		line-height: 35px;
+		padding: 0 10px;
+		background: #45A041;
+		text-align: center;
+		color: #fff;
+		text-decoration: none;
+		font-size: 14px;
+		font-weight: normal;
+		white-space: nowrap;
+	}
+
+}
+
+/*********************
+GENERAL STYLES
+*********************/
+div.swp_social_panel,
+.swp_social_panel:not(.nc_floater):not(.swp_social_panelSide) {
+	width: auto !important;
+	clear: none !important;
+}
+
+hr.hr-blue,
+.site-main hr.hr-blue {
+	display: block;
+	background-color: #5CC6E8;
+	height: 5px;
+	margin: 50px 0;
+}
+
+.mcd-testimonial {
+	position: relative;
+	border: #75716F 1px solid;
+	margin-bottom: 40px;
+	padding: 40px;
+	font-family: $raleway;
+	font-size: 30px;
+	text-align: center;
+	line-height: 40px;
+	color: #EC008C;
+	strong {
+		font-size: 19px;
+	}
+	.quote-icon {
+		position: absolute;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: $white;
+		width: 58px;
+		height: 72px;
+	}
+	.quote-icon-left {
+		top: 0;
+		left: -1px;
+		background-image: url('../../images/icon-quote-left.png');
+		background-position: bottom center;
+	}
+	.quote-icon-right {
+		bottom: 0;
+		right: -1px;
+		background-image: url('../../images/icon-quote-right.png');
+	}
+}
+
+//Pillar page specific
+.page-template-template-pillar {
+	h1,
+	h2,
+	h3,
+	h4,
+	.section-header h1,
+	.section-header h2 {
+		color: #5CC6E8;
+	}
+}
+
+/*--[  Footer Social Icons ]--*/
+.footer-social-icons {
+	position: relative;
+	padding-top: 20px;
+	font-size: 25px;
+	text-align: center;
+	a {
+		padding-right: 15px;
+		text-decoration: none;
+		color: #58c7eb;
+		.txt {
+			display: none;
+		}
+		.fa {
+			padding-right: 5px;
+		}
+		&:hover,
+		&:visited {
+			color: #58c7eb;
+		}
+	}
+}
+
+/*--[  Landing Page Template ]--*/
+.page-template-template-landing-simple,
+.page-template-template-landing-page,
+.page-id-15822 {
+	font-family: $raleway;
+
+	//hide some footer items we don't want
+	.shiftnav-wrap {
+		padding-top: 0 !important;
+	}
+
+	.shiftnav,
+	.shiftnav-toggle,
+	.liveChatFloatingButton,
+	.prefooter-evaluation {
+		display: none;
+	}
+
+	#colophon {
+		.grid-container {
+			hr,
+			.cols4 {
+				display: none;
+			}
+		}
+	}
+
+	/*--[ Fix Headers ]--*/
+	h1, h2, h3, h4, h5, h6 {
+		font-family: $montserrat;
+		color: #5CC6E8;
+	}
+
+	/*--[ Prevent wysiwyg issues ]--*/
+	.wysiwyg {
+		position: relative;
+		img,
+		iframe,
+		video {
+			max-width: 100%;
+		}
+		img {
+			height: auto;
+		}
+	}
+
+	/*--[ center content ]--*/
+	.inner {
+		position: relative;
+		max-width: 1170px;
+		margin: 0 auto;
+		padding: 0 25px;
+	}
+
+	/*--[ Top Section ]--*/
+	.top-section {
+		position: relative;
+		/*min-height: 850px;*/
+		margin-bottom: 40px;
+		background: url('../../images/landing-page-header.jpg') no-repeat top center;
+		background-size: cover;
+		color: #fff;
+	}
+
+	.header {
+		position: relative;
+		overflow: hidden;
+		margin-bottom: 20px;
+		padding: 25px 0;
+		border-bottom: #5CC6E8 1px solid;
+		text-align: center;
+		.logo {
+			display: block;
+			width: 85px;
+			margin: 0 auto;
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+		.right-side {
+			position: relative;
+			display: none;
+			.talk {
+				.fa {
+					margin-right: 5px;
+				}
+			}
+			.tel {
+				font-weight: 700;
+				font-size: 25px;
+				line-height: 38px;
+				color: #5CC6E8;
+			}
+		}
+	}
+
+	.intro {
+		position: relative;
+		background-repeat: no-repeat;
+		background-position: 0 -9999px;
+		background-image: url('../../images/mcdivitt-team-landing.png');
+		padding-bottom: 20px;
+		text-align: center;
+		overflow: hidden;
+
+		.wysiwyg {
+			position: relative;
+			overflow: hidden;
+		}
+
+		h1,h2,h3,h4 {
+			&:first-child {
+				margin: 0;
+				text-align: center;
+				font-weight: 700;
+				font-size:25px;
+				line-height: 40px;
+			}
+		}
+	}
+
+	/*--[ Form Wrap ]--*/
+	.form-wrap {
+		position: relative;
+		max-width: 584px;
+
+		form {
+			position: relative;
+			display: block;
+			overflow: hidden;
+			margin-bottom: 30px;
+			text-align: left;
+
+			.hs_firstname,
+			.hs_lastname {
+				position: relative;
+				float: left;
+				width: 48%;
+			}
+
+			.hs_lastname {
+				float: right;
+			}
+
+			.hs_email {
+				position: relative;
+				clear: both;
+			}
+		}
+
+		.field {
+			margin-bottom: 20px;
+		}
+
+		label {
+			display: none;
+		}
+
+		input[type=text],
+		input[type=email],
+		input[type=tel],
+		textarea {
+			width: 100%;
+			padding: 0 5px;
+			background: #fff;
+			border: #75716F 1px solid;
+			-moz-border-radius: 4px;
+			-webkit-border-radius: 4px;
+			border-radius: 4px;
+			font-size: 19px;
+			line-height: 40px;
+			color: #999999;
+		}
+
+		textarea {
+			min-height: 90px;
+			line-height: 1.7em;
+		}
+
+		input[type=submit] {
+			@extend .button-red;
+			padding: 0 35px;
+			text-transform: uppercase;
+		}
+
+		em.disclaimer {
+			display: block;
+			padding-bottom: 75px;
+			font-size: 12px;
+			line-height: 14px;
+			color: #999;
+			font-style: normal;
+		}
+
+	}
+
+	/*--[ Content Section ]--*/
+	.content-section {
+		color: #666;
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	.content-first {
+		position: relative;
+		margin-bottom: 60px;
+	}
+
+	.content-second,
+	.content-final {
+		position: relative;
+		margin-bottom: 100px;
+	}
+
+	.services-wrap {
+		margin-bottom: 100px;
+	}
+
+	.services-list {
+		float: none;
+		max-width: 350px;
+		margin-bottom: 45px;
+		font-size: 19px;
+		.heading {
+			margin: 0 0 20px;
+			padding: 0;
+			font-weight: 700;
+			font-size: 30px;
+			line-height: 45px;
+			color: #5CC6E8;
+		}
+		ul {
+			list-style-position: outside;
+			margin: 0;
+			padding: 0 0 0 25px;
+			li {
+				margin-bottom: 15px;
+				line-height: 20px;
+				font-size: 19px;
+			}
+		}
+	}
+
+	.testimonial {
+		position: relative;
+		width: 100%;
+		max-width: 780px;
+		float: none;
+		border: #bbb 1px solid;
+		padding: 55px 45px;
+		text-align: center;
+		color: #666;
+		font-size: 19px;
+		line-height: 24px;
+
+		.quote {
+			margin-bottom: 20px;
+		}
+
+		.quote-author {
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 20px;
+			color: #5CC6E8;
+		}
+
+		.fa {
+			position: absolute;
+			background-color: #fff;
+			padding: 15px 5px;
+			font-size: 40px;
+			&.fa-quote-left {
+				top: 0;
+				left: -1px;
+			}
+			&.fa-quote-right {
+				bottom: 0;
+				right: -1px;
+			}
+		}
+	}
+
+	.stats {
+		position: relative;
+		border-top: #bbb 1px solid;
+		border-bottom: #bbb 1px solid;
+		margin-bottom: 100px;
+		padding: 75px 0;
+		text-align: center;
+		font-size: 23px;
+		line-height: 25px;
+		color: #666;
+		.stat {
+			display: inline-block;
+			margin-top: 80px;
+			padding: 0 50px;
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+		.data {
+			margin-bottom: 10px;
+			font-family: $montserrat;
+			font-weight: 700;
+			font-size: 50px;
+			line-height: 45px;
+			color: #9A243F;
+		}
+	}
+
+	.trip-cols {
+		position: relative;
+		margin-bottom: 100px;
+		.heading {
+			margin: 0 0 20px;
+			text-align: center;
+			font-weight: 700;
+			font-size: 30px;
+			line-height: 35px;
+		}
+		.col {
+			margin-bottom: 80px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.box-cta {
+		position: relative;
+		margin-bottom: 100px;
+		padding: 75px 40px;
+		border: #75716F 1px solid;
+		text-align: center;
+		font-weight: 700;
+		font-size: 40px;
+		line-height: 64.97px;
+		color: #5CC6E8;
+
+		.button-red {
+			position: relative;
+			top: -10px;
+		}
+	}
+
+	.trusted-by {
+		position: relative;
+		padding: 55px 0 80px;
+		border-top: #bbb 1px solid;
+		text-align: center;
+		.heading {
+			margin: 0 0 60px;
+			font-weight: 700;
+			font-size: 40px;
+			line-height: 45px;
+		}
+		.logo {
+			display: block;
+			margin: 0 auto 40px;
+			img {
+				max-width: 100%;
+			}
+		}
+	}
+
+}
+
+//Water Cases Form specific
+.page-id-15822 {
+	.header {
+		border-bottom: none;
+		margin-bottom: 0;
+	}
+	.intro {
+		display: none;
+	}
+	.prefooter-evaluation {
+		display: none;
+	}
+	.site-footer {
+		.cols4,
+		hr {
+			display: none;
+		}
+	}
+
+	.content-section {
+		padding-bottom: 25px;
+	}
+}
+
+#wc-referral-form {
+	padding: 50px 0;
+}
+
+#wc-form {
+	position: relative;
+	margin: 0 auto;
+	max-width: 500px;
+
+	input[type=text] {
+		max-height: 32px;
+	}
+
+	.group {
+		position: relative;
+		margin-bottom: 30px;
+
+		.q {
+			margin-bottom: 30px;
+		}
+	}
+
+	.row {
+		display: flex;
+		flex-wrap:wrap;
+		justify-content: space-between;
+		position: relative;
+		margin-bottom: 15px;
+
+		.item {
+			width: 80px;
+		}
+
+		label {
+			text-align: center;
+			margin-left: 10px;
+		}
+
+		.date-inp-header,
+		.date-inp {
+			margin-left: 10px;
+			width: 90px;
+		}
+	}
+
+	span.txt {
+		display: inline-block;
+		text-indent: -99999px;
+	}
+
+	.dname {
+		font-size: 22px;
+		color: #5CC6E8;
+	}
+
+	.msgs {
+		display: none;
+		margin-bottom: 15px;
+		flex-basis: 100%;
+		color: red;
+		font-style: 12px;
+	}
+}
+
+/******************************************
+* Review Widget / Testimonials update
+******************************************/
+.reviews-wrap {
+	position: relative;
+
+	.review-widget {
+		position: relative;
+		padding: 50px 0 0 0;
+	}
+}
+
+
+/******************************************
+* Social Styles added by Matt G
+******************************************/
+.social-widget-links {
+position: relative;
+}
+
+.social-widget-links a {
+position: relative;
+display: inline-block;
+text-align: left;
+font-size: 18px;
+color: #22426a !important;
+background-color: #FFF;
+border: 2px solid #22426a;
+border-radius: 5px;
+box-shadow: inset 0 0 0 #22426a;
+transition: all 150ms ease-in;
+padding: 10px 20px;
+margin: 7px 10px 7px 0;
+white-space: nowrap;
+vertical-align: top;
+text-decoration: none;
+}
+
+.social-widget-links a:visited {
+  color: #22426a !important;
+  text-decoration: none;
+}
+
+.social-widget-links a span {
+padding-left: 35px;
+position: relative;
+text-align: left;
+font-size: 18px;
+font-weight: 700;
+}
+
+.social-widget-links a #itunes:before {
+content: url('https://mcdivittlaw.com/wp-content/themes/mcdivitt-law-firm/images/icon-apple-blue.png');
+position: absolute;
+top: -5px;
+left: 0;
+transition: all 250ms ease-in;
+}
+
+.social-widget-links a #google:before {
+content: url('https://mcdivittlaw.com/wp-content/themes/mcdivitt-law-firm/images/icon-google-blue.png');
+position: absolute;
+top: -5px;
+left: 0;
+transition: all 250ms ease-in;
+}
+
+.social-widget-links a #spotify:before {
+content: url('https://mcdivittlaw.com/wp-content/themes/mcdivitt-law-firm/images/icon-spotify-blue.png');
+position: absolute;
+top: -5px;
+left: 0;
+transition: all 250ms ease-in;
+}
+
+.social-widget-links a #rss:before {
+content: url('https://mcdivittlaw.com/wp-content/themes/mcdivitt-law-firm/images/icon-rss-blue.png');
+position: absolute;
+top: -5px;
+left: 0;
+transition: all 250ms ease-in;
+}
+
+.social-widget-links a:hover #itunes:before,
+.social-widget-links a:hover #google:before,
+.social-widget-links a:hover #spotify:before,
+.social-widget-links a:hover #rss:before {
+  left: -3px;
+}
+
+.page-sidebar {
+	.review-widget {
+		position: relative;
+		margin-top: 30px;
+	}
+}
+
+/******************************************
+* Password Protected WC page
+******************************************/
+.page-id-16163 {
+
+	//fix pwd form
+	.post-password-form {
+		max-width: 500px;
+		margin: 0 auto;
+		padding: 50px 25px;
+	}
+
+	//pwd form errors
+	.post-password-errors {
+		position: relative;
+		max-width: 500px;
+		margin: 0 auto;
+		padding: 50px 25px 0;
+		color: red;
+	}
+
+	//fix wraps
+	.basic {
+		.basic-details {
+			margin-bottom: 15px;
+		}
+	}
+
+}
+
+//
+.wc-articles-wrap {
+	position: relative;
+	max-width: 900px;
+	margin-bottom: 30px;
+
+	.wc-article {
+		position: relative;
+		margin-bottom: 5px;
+
+		&.expanded {
+			.wc-article-title {
+				.wc-open-icon {
+					display: none;
+				}
+				.wc-close-icon {
+					display: block;
+				}
+			}
+			.wc-article-content {
+				display: block;
+			}
+		}
+	}
+
+	.wc-article-title {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 15px 20px;
+		background-color: #dadada;
+		cursor: pointer;
+
+		.wc-title-icon {
+			flex-grow: 0;
+			font-weight: bold;
+			font-size: 40px;
+		}
+
+		.wc-close-icon {
+			display: none;
+		}
+
+		h2 {
+			flex-grow: 1;
+			padding: 0 25px;
+		}
+
+		.wc-article-date {
+			flex-grow: 0;
+			font-weight: bold;
+		}
+	}
+
+	.wc-article-content {
+		position: relative;
+		display: none;
+		padding: 10px 30px;
+	}
+}
+
+//hide Request Eval form on MADD page
+.page-id-12486 {
+	.prefooter-evaluation {
+		//display: none !important;
+	}
+}
+
+//mobile only version of pa resources
+.mobile-only-resources {
+	position: relative;
+
+	.page-sidebar {
+		display: block;
+		float: none;
+
+		.resource-center {
+			max-width: 330px;
+			margin: 0 auto;
+		}
+	}
+
+	//no form
+	.sidebar-form { display: none !important; }
+}
+
+//new careers page
+.ncareers {
+	position: relative;
+
+	hr {
+		margin-bottom: 0 !important;
+		background-color: #58c7eb;
+		color: #58c7eb;
+	}
+
+	.ncopy {
+		position: relative;
+		font-size: 19px;
+		line-height: 1.8em;
+		padding-top: 30px;
+
+		a {
+			color: #58c7eb;
+			text-decoration: none;
+		}
+	}
+
+	.ncareer {
+		position: relative;
+		overflow: hidden;
+		padding: 50px 0;
+		line-height: 1.8em;
+		font-size: 16px;
+
+		img {
+			position: relative;
+			border-radius: 50%;
+			border: #e3e3e3 2px solid;
+			overflow: hidden;
+			width: 215px;
+			height: auto;
+		}
+
+		strong {
+			display: block;
+		}
+	}
+}
+
+body.page-id-16650 {
+	.prefooter-evaluation {
+		display: none;
+	}
+}

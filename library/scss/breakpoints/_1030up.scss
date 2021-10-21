@@ -1,0 +1,137 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop.
+
+******************************************************************/
+
+/*--[  Footer Social Icons ]--*/
+.footer-social-icons {
+	float: left;
+	padding-top: 10px;
+	font-size: 14px;
+	text-align: left;
+	a {
+		.txt {
+			display: inline;
+		}
+		.fa {
+		}
+	}
+}
+
+/*--[  Landing Page Template ]--*/
+.page-template-template-landing-simple,
+.page-template-template-landing-page {
+
+	.inner {
+		/*padding: 0;*/
+	}
+
+	.intro {
+		background-position: bottom right;
+	}
+
+}
+
+.callout-box {
+	padding: 50px 50px;
+	font-size: 30px;
+	text-align: center;
+}
+
+//Frog
+.mcribbit-intro {
+	margin-bottom: 80px;
+	padding-top: 30px;
+	padding-left: 130px;
+	h1 {
+		font-size: 40px;
+		text-align: left;
+	}
+	h1,p {
+		max-width: 560px;
+	}
+	.frog {
+		position: absolute;
+		right: 50px;
+		bottom: -17px;
+		left: auto;
+		width: 258px;
+		height: 233px;
+		background-size: normal;
+	}
+}
+
+//Frog Page
+.page-id-15407 {
+	.testimonial {
+		font-size: 30px;
+		line-height: 40px;
+	}
+	.frog-excerpt {
+		padding-left: 250px;
+		background-position: bottom left;
+		background-size: auto;
+		padding-top: 0;
+	}
+	.video {
+		max-width: 584px;
+		margin-left: 30px;
+		margin-bottom: 30px;
+		iframe {
+			height: 315px;
+		}
+	}
+}
+
+
+/******************************************
+* Review Widget / Testimonials update
+******************************************/
+.reviews-wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.review-widget {
+		padding: 0 30px 0 0;
+	}
+
+	.testimonials-wrap {
+		position: relative;
+		.review {
+			width: 100%;
+			padding-left: 0 !important;
+		}
+	}
+}
+
+//footer form
+/*
+.prefooter-evaluation .gform_body>ul { display: flex; flex-wrap: wrap; justify-content: space-between; }
+.prefooter-evaluation .ginput_complex.ginput_container span { width: 50%; padding-right: 15px; padding-left: 15px; }
+.prefooter-evaluation .gform_body>ul>li {
+	width: 49%;
+	flex-grow: 0;
+
+	&#field_2_2,
+	&#field_2_3 {
+		width: 25%;
+		padding-left: 15px;
+	}
+
+	&#field_2_2 {
+		padding-left: 0;
+	}
+
+	input {
+		max-width: 100%;
+	}
+}
+*/
+

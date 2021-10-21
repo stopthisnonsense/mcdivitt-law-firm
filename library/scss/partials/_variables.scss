@@ -1,0 +1,52 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Variables
+
+Here is where we declare all our variables like colors, fonts,
+base values, and defaults. We want to make sure this file ONLY
+contains variables that way our files don't get all messy.
+No one likes a mess.
+
+******************************************************************/
+
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+$black:             #000;
+$white:             #fff;
+
+.txt-center {
+	text-align: center;
+}
+
+.lg-blue {
+	color: #5CC6E8;
+	font-size: 20px;
+	font-weight: 700;
+	font-family:'Montserrat',sans-serif;
+}
+
+.lg-gray,
+.lg-grey {
+	font-size: 30px;
+	color: #666666;
+	font-weight: 100;
+}
+
+@media only screen and (min-width: 1030px) {
+	.lg-blue,
+	.lg-gray,
+	.lg-grey {
+		font-size: 30px;
+	}
+}
+
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/

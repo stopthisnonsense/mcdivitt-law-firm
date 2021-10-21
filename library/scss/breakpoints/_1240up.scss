@@ -1,0 +1,31 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Super Large Monitor Stylesheet
+
+You can add some advanced styles here if you like. This kicks in
+on larger screens like the 4K or 5K iMac.
+
+******************************************************************/
+
+/*--[  Landing Page Template ]--*/
+.page-template-template-landing-simple,
+.page-template-template-landing-page {
+
+	.inner {
+		padding: 0;
+	}
+
+}
+
+
+//Frog
+.mcribbit-intro {
+	.frog {
+		right: 167px;
+	}
+}
+
+//ie bug fix for attorneys page
+.attorneys .attorney-listing .attorney .headshot-wrapper .headshot { width: 218px; height: 218px; }

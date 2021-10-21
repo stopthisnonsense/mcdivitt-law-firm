@@ -1,0 +1,297 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+This stylesheet will be used for tablets and larger devices
+like desktops. The grid starts working here and you can get
+busy with more stylings.
+
+******************************************************************/
+
+//floating frog
+#masthead { padding-bottom: 0; }
+#floating-frog {
+	left: 0;
+	margin-left: 0;
+}
+
+/*--[  Landing Page Template ]--*/
+.page-template-template-landing-simple {
+	.intro {
+		h1,h2,h3,h4 {
+			&:first-child {
+				font-size: 60px !important;
+			}
+		}
+	}
+}
+
+.page-template-template-landing-simple,
+.page-template-template-landing-page {
+
+	//hide some footer items we don't want
+	.prefooter-evaluation {
+	}
+
+	#colophon {
+		.grid-container {
+			hr,
+			.cols4 {
+			}
+		}
+	}
+
+	/*--[ center content ]--*/
+	.inner {
+	}
+
+	/*--[ Top Section ]--*/
+	.top-section {
+		margin-bottom: 90px;
+	}
+
+	.header {
+		margin-bottom: 80px;
+		text-align: left;
+		.logo {
+			float: left;
+			margin: 0 auto 15px;
+		}
+		.right-side {
+			display: block;
+			float: right;
+			.talk {
+				padding-right: 40px;
+				.fa {
+				}
+			}
+			.tel {
+			}
+		}
+	}
+
+	.intro {
+		padding-bottom: 0;
+		text-align: left;
+
+		.wysiwyg {
+			margin-bottom: 100px;
+		}
+
+		h1,h2,h3,h4 {
+			&:first-child {
+				margin: 0 0 20px;
+				font-size: 80px;
+				line-height: 80px;
+			}
+		}
+	}
+
+	/*--[ Form Wrap ]--*/
+	.form-wrap {
+
+		form {
+
+			.hs_firstname,
+			.hs_lastname {
+			}
+
+			.hs_lastname {
+			}
+
+			.hs_email {
+			}
+		}
+
+		.field {
+		}
+
+		label {
+		}
+
+		input[type=text],
+		input[type=email],
+		input[type=tel],
+		textarea {
+		}
+
+		textarea {
+		}
+
+		input[type=submit] {
+		}
+
+		em.disclaimer {
+		}
+
+	}
+
+	/*--[ Content Section ]--*/
+	.content-section {
+		font-size: 19px;
+		line-height: 30px;
+	}
+
+	.content-first {
+		h1,h2,h3,h4 {
+			&:first-child {
+				font-family: $raleway;
+				font-size: 31px !important;
+				font-weight: 400;
+			}
+		}
+	}
+
+	.content-second,
+	.content-final {
+	}
+
+	.services-wrap {
+	}
+
+	.services-list {
+		float: left;
+		margin-bottom: 0;
+		font-size: 23px;
+		.heading {
+		}
+		ul {
+			li {
+				line-height: 25px;
+				font-size: 23px;
+			}
+		}
+	}
+
+	.testimonial {
+		float: right;
+		padding: 70px 120px;
+		font-size: 30px;
+		line-height: 40px;
+
+		.quote {
+		}
+
+		.quote-author {
+			font-size: 19px;
+			line-height: 40px;
+		}
+
+		.fa {
+			&.fa-quote-left {
+			}
+			&.fa-quote-right {
+			}
+		}
+	}
+
+	.stats {
+		.stat {
+			margin-top: 0;
+		}
+		.data {
+		}
+	}
+
+	.trip-cols {
+		.heading {
+		}
+		.col {
+			margin-bottom: 0;
+		}
+	}
+
+	.box-cta {
+
+		.button-red {
+		}
+	}
+
+	.trusted-by {
+		.heading {
+		}
+		.logo {
+			display: inline-block;
+			margin: 0 30px;
+			img {
+				width: auto;
+				max-height: 100px;
+			}
+		}
+	}
+
+}
+
+/* Practice Areas List */
+.practice-areas-list { display: flex; flex-wrap: wrap; justify-content: space-between; }
+.practice-areas-list .practice-area { flex-basis: 25%;  }
+.practice-areas-list .img {  }
+.practice-areas-list .img img {  }
+.practice-areas-list .title {  }
+.practice-areas-list a.learn-more {  }
+
+/* Defective Drugs List */
+.defective-drugs-list {
+	.list-wrap {
+		display: flex;
+	}
+	ul.list {
+		flex-basis: 50%;
+	}
+}
+
+//Water Cases Form specific
+.page-id-15822 {
+	.header {
+	}
+	.intro {
+	}
+	.prefooter-evaluation {
+	}
+	.site-footer {
+		.cols4,
+		hr {
+		}
+	}
+
+	.content-section {
+	}
+}
+
+#wc-referral-form {
+}
+
+#wc-form {
+
+	.group {
+
+		.q {
+		}
+	}
+
+	.row {
+
+		.item {
+			width: 150px;
+		}
+
+		label {
+		}
+
+		.date-inp-header,
+		.date-inp {
+			width: 200px;
+		}
+	}
+
+	span.txt {
+	}
+}
+
+//mobile only version of pa resources
+.mobile-only-resources {
+	display: none !important;
+}
+

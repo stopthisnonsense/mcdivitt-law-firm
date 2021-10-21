@@ -1,0 +1,86 @@
+/*
+Error: Undefined variable: "$sb-black".
+        on line 91 of library/scss/editor-style.scss
+
+86: 	H1, H2, H3, H4, H5 STYLES
+87: 	******************************************************************\/
+88: 
+89: 	h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+90: 	margin: 1.333em 0 0.5em;
+91: 	color: lighten($sb-black, 12%);
+92:   	font-weight: 500;
+93:   	line-height: 1.2;
+94: 	text-rendering: optimizelegibility;
+95: 	/*
+96: 	if you're going to use webfonts, be sure to check your weights
+
+Backtrace:
+library/scss/editor-style.scss:91
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/script/tree/funcall.rb:186:in `perform_arg'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/script/tree/funcall.rb:133:in `block in _perform'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/script/tree/funcall.rb:133:in `each'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/script/tree/funcall.rb:133:in `each_with_index'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/script/tree/funcall.rb:133:in `each'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/script/tree/funcall.rb:133:in `map'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/script/tree/funcall.rb:133:in `_perform'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+/Users/ckruse/.rvm/gems/ruby-2.1.2@global/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+/Users/ckruse/.rvm/gems/ruby-2.1.2/bin/sass:23:in `load'
+/Users/ckruse/.rvm/gems/ruby-2.1.2/bin/sass:23:in `<main>'
+/Users/ckruse/.rvm/gems/ruby-2.1.2/bin/ruby_executable_hooks:15:in `eval'
+/Users/ckruse/.rvm/gems/ruby-2.1.2/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$sb-black\".\A         on line 91 of library/scss/editor-style.scss\A \A 86: 	H1, H2, H3, H4, H5 STYLES\A 87: 	******************************************************************/\A 88: \A 89: 	h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {\A 90: 	margin: 1.333em 0 0.5em;\A 91: 	color: lighten($sb-black, 12%);\A 92:   	font-weight: 500;\A 93:   	line-height: 1.2;\A 94: 	text-rendering: optimizelegibility;\A 95: 	/*\A 96: 	if you're going to use webfonts, be sure to check your weights"; }

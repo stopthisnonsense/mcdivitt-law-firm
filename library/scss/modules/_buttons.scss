@@ -1,0 +1,59 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Button Styles
+
+Buttons are a pretty important part of your site's style, so it's
+important to have a consistent baseline for them. Use this stylesheet
+to create all kinds of buttons.
+
+Helpful Links:
+http://galp.in/blog/2011/08/02/the-ui-guide-part-1-buttons/
+
+******************************************************************/
+
+/*********************
+BUTTON DEFAULTS
+We're gonna use a placeholder selector here
+so we can use common styles. We then use this
+to load up the defaults in all our buttons.
+
+See here on placeholder selectors and why you should
+use @extend instead of @include:
+http://thesassway.com/intermediate/understanding-placeholder-selectors
+
+*********************/
+
+%button {
+  display: inline-block;
+  min-width: 170px;
+  border: none;
+  -moz-border-radius: 17px;
+  -webkit-border-radius: 17px;
+  border-radius: 17px;
+  padding: 0 15px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 38px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+
+  // hovering on the btn
+  &:hover, &:focus {
+    color: #fff;
+  } // end hover
+
+} // end .button
+
+.button {
+  @extend %button;
+}
+
+.button-red {
+  @extend %button;
+  background: #9A243F;
+}
