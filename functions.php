@@ -187,7 +187,7 @@ add_filter('wp_seo_get_bc_title', function($link_text, $id) {
 
 /**
  *	Add Body Class for Streaming pages
- *	
+ *
  */
 function mcdivitt_add_body_class_for_streaming( $classes ) {
 	global $post;
@@ -201,9 +201,9 @@ function mcdivitt_add_body_class_for_streaming( $classes ) {
 add_filter( 'body_class', 'mcdivitt_add_body_class_for_streaming' );
 
 /**
- * Disable Yoast SEO 
+ * Disable Yoast SEO
  * Schema Markup
- * 
+ *
  */
 function disable_yoast_seo_schema_output( $data ) {
 
@@ -218,7 +218,7 @@ add_filter( 'wpseo_json_ld_output', 'disable_yoast_seo_schema_output' );
 
 /**
  *  exclude certain pages from search
- *  
+ *
  */
 function mcdivitt_exclude_certain_pages_from_search( $query ) {
 
@@ -262,7 +262,7 @@ function __debug( $data, $die = true ) {
 /**
  * Remove Social Warfare shortcode
  * Remove PostRatings shortcode
- * 
+ *
  */
 function mcd_remove_social_warfare( $atts, $content = "" ) {
 	//give nothing
@@ -284,8 +284,68 @@ function shortcode_pageURL () {
 add_shortcode('page_url_sc', 'shortcode_pageURL');*/
 
 
+function callout_box_shortcode( $atts = [], $content = null, $tag = '' ) {
+	$atts = array_change_key_case( (array) $atts, CASE_LOWER );
+
+	$callout_box = '<div class="callout-box">';
+
+	if ( !is_null( $content ) ) {
+		$callout_box .= apply_filters( 'the_content', $content, 99 );
+		// $callout_box .= do_shortcode( $content );
+	}
+
+	$callout_box .= '</div>';
+
+	return $callout_box;
+}
+
+function testimonial_shortcode( $atts = [], $content = null, $tag = '' ) {
+	$atts = array_change_key_case( (array) $atts, CASE_LOWER );
+
+	$testimonial = '<div class="new-testimonial">';
+
+	if( !is_null( $content ) ) {
+		$testimonial .= '<div class="quote">';
+		$testimonial .= apply_filters( 'the_content', $content, 99 );
+		// $testimonial .= do_shortcode( $content );
+		$testimonial .= '</div>';
+	}
+
+	$testimonial_atts = shortcode_atts( array( 'author' => '' ), $atts, $tag );
+
+	if( $testimonial_atts['author'] !== '' ) {
+		$testimonial .= '<div class="quote-author">';
+		$testimonial .= esc_html__( $testimonial_atts['author'], 'testimonial' );
+		$testimonial .= '</div>';
+	}
+
+	$testimonial .= '</div>';
+
+	return $testimonial;
 
 
+}
+
+function frog_excerpt_shortcode( $atts = [], $content = null, $tag = '' ) {
+	$atts = array_change_key_case( (array) $atts, CASE_LOWER );
+
+	$frog_box = '<div class="frog-excerpt">';
+
+	if ( !is_null( $content ) ) {
+		$frog_box .= apply_filters( 'the_content', $content, 99 );
+		// $frog_box .= do_shortcode( $content );
+	}
+
+	$frog_box .= '</div>';
+
+	return $frog_box;
+}
 
 
+function ywpt_shortcodes() {
+	add_shortcode('callout_box', 'callout_box_shortcode');
+	add_shortcode('testimonial', 'testimonial_shortcode');
+	add_shortcode( 'frog_excerpt', 'frog_excerpt_shortcode' );
+}
 
+add_action( 'init', 'ywpt_shortcodes' );

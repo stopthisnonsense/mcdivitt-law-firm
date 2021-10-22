@@ -14,11 +14,14 @@ get_header();
 <div class="grid-container">
   <div id="primary" class="content-area">
   	<main id="main" class="site-main" role="main">
-  		<div class="page-sidebar">
-  			<?php get_sidebar(); ?>
-  		</div>
   		<?php
-  		while ( have_posts() ) : the_post();
+  		while ( have_posts() ) : the_post(); ?>
+		  <div class="mcribbit-intro">
+		  	<h1><?php the_title(); ?></h1>
+			  <div class="frog"></div>
+		  </div>
+
+		  <?php
 
   			get_template_part( 'template-parts/content', get_post_format() );
 
@@ -27,7 +30,8 @@ get_header();
   				comments_template();
   			endif;
 
-  		endwhile; // End of the loop.
+  		endwhile;
+		  wp_reset_postdata(); // End of the loop.
   		?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
