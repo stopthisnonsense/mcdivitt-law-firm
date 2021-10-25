@@ -12,7 +12,7 @@ get_header(); ?>
 <nav class="breadcrumbs">
 	<?php if ( function_exists('yoast_breadcrumb') ) {yoast_breadcrumb('<div class="grid-container">','</div>');} ?>
 </nav>
-	
+
 <div class="grid-container">
 	<div class="section-header">
 		  <h2><?php
@@ -48,7 +48,7 @@ get_header(); ?>
 
 				endwhile;
 
-				the_posts_navigation();
+				do_shortcode( '[wpv-pager-nav-links output="bootstrap"]' );
 
 			else :
 

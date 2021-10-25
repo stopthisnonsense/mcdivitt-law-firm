@@ -1,3 +1,6 @@
+<?php
+    $frog_excerpt = get_field( 'frog_excerpt', $post->ID );
+    ?>
 
 <div <?php post_class('frog-item'); ?>>
     <div class="frog-item__left">
@@ -10,7 +13,13 @@
     <h4 class="frog-item__title"><?php the_title(); ?>
     </h4>
     <div class="frog-item__excerpt">
-        <?php the_excerpt(); ?>
+        <?php
+            if( $frog_excerpt ) {
+                echo $frog_excerpt;
+                } else {
+                    the_excerpt();
+                }
+            ?>
         <div class="blog">
             <div class="blog-entry">
                 <div class="frog-item__button-container"><a class="frog-item__button" href="<?php the_permalink(); ?>">Read More</a></div>

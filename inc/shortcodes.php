@@ -35,7 +35,7 @@ add_shortcode( 'boxcta', 'do_boxcta_shortcode' );
 
 /**
  *	Practice Areas
- *	
+ *
  *	Lists Practice Areas out with icons. Data managed
  *	via ACF on Practice Areas page.
  */
@@ -148,7 +148,7 @@ add_shortcode( 'defective-drugs', 'mcd_defective_drugs_shortcode' );
 /**
  *  [bluehr]
  *  Blue horizontal rule
- *  
+ *
  */
 function mcdivitt_blue_hr_shortcode( $atts, $content = "" ) {
 
@@ -160,7 +160,7 @@ add_shortcode( 'bluehr', 'mcdivitt_blue_hr_shortcode' );
 
 /**
  * [testimonial]
- * 
+ *
  */
 function mcdivitt_testimonial_shortcode( $atts, $content = false ) {
 
@@ -186,7 +186,7 @@ add_shortcode( 'testimonial', 'mcdivitt_testimonial_shortcode' );
 /**
  *  [blue-button]
  *  Blue button
- *  
+ *
  */
 function mcdivitt_blue_button_shortcode( $atts, $content = "Button" ) {
 
@@ -213,7 +213,7 @@ add_shortcode( 'blue-button', 'mcdivitt_blue_button_shortcode' );
 /**
  * careers
  * Output custom content to the careers page
- * 
+ *
  */
 function mcdivitt_shortcode_careers( $atts, $content = "" ) {
 
@@ -237,5 +237,67 @@ function print_menu_shortcode($atts, $content = null) {
 	extract(shortcode_atts(array( 'name' => null, 'class' => null ), $atts));
 	return wp_nav_menu( array( 'menu' => $name, 'menu_class' => $class, 'echo' => false ) );
 	}
-	
+
 	add_shortcode('menu', 'print_menu_shortcode');
+
+
+function callout_box_shortcode( $atts = [], $content = null, $tag = '' ) {
+	$atts = array_change_key_case( (array) $atts, CASE_LOWER );
+
+	$callout_box = '<div class="callout-box">';
+
+	if ( !is_null( $content ) ) {
+		$callout_box .= apply_filters( 'the_content', $content, 99 );
+		// $callout_box .= do_shortcode( $content );
+	}
+
+	$callout_box .= '</div>';
+
+	return $callout_box;
+}
+
+function testimonial_shortcode( $atts = [], $content = null, $tag = '' ) {
+	$atts = array_change_key_case( (array) $atts, CASE_LOWER );
+
+	$testimonial = '<div class="new-testimonial">';
+
+	if( !is_null( $content ) ) {
+		$testimonial .= '<div class="quote">';
+		$testimonial .= apply_filters( 'the_content', $content, 99 );
+		// $testimonial .= do_shortcode( $content );
+		$testimonial .= '</div>';
+	}
+
+	$testimonial_atts = shortcode_atts( array( 'author' => '' ), $atts, $tag );
+
+	if( $testimonial_atts['author'] !== '' ) {
+		$testimonial .= '<div class="quote-author">';
+		$testimonial .= esc_html__( $testimonial_atts['author'], 'testimonial' );
+		$testimonial .= '</div>';
+	}
+
+	$testimonial .= '</div>';
+
+	return $testimonial;
+
+
+}
+
+function frog_excerpt_shortcode( $atts = [], $content = null, $tag = '' ) {
+	$atts = array_change_key_case( (array) $atts, CASE_LOWER );
+
+	$frog_box = '<div class="frog-excerpt">';
+
+	if ( !is_null( $content ) ) {
+		$frog_box .= apply_filters( 'the_content', $content, 99 );
+		// $frog_box .= do_shortcode( $content );
+	}
+
+	$frog_box .= '</div>';
+
+	return $frog_box;
+}
+
+add_shortcode('callout_box', 'callout_box_shortcode');
+	add_shortcode('testimonial', 'testimonial_shortcode');
+	add_shortcode( 'frog_excerpt', 'frog_excerpt_shortcode' );

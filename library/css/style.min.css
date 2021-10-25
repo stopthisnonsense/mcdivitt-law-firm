@@ -4110,7 +4110,8 @@ nav.breadcrumbs span.breadcrumb_last {
 	text-decoration: none;
 }
 
-.video ul.wpv-pagination-nav-links-container {
+.video ul.wpv-pagination-nav-links-container,
+.pagination--frogs {
 	font-family: 'Raleway', sans-serif;
 	font-size: 14px;
 	font-weight: 800;
@@ -4121,22 +4122,26 @@ nav.breadcrumbs span.breadcrumb_last {
 	text-align: center;
 }
 
-.video ul.wpv-pagination-nav-links-container li {
+.video ul.wpv-pagination-nav-links-container li,
+.pagination--frogs .page-numbers {
 	display: inline-block;
 	margin: 0 10px 0 0;
 }
 
-.video ul.wpv-pagination-nav-links-container li:last-of-type {
+.video ul.wpv-pagination-nav-links-container li:last-of-type,
+.pagination--frogs .page-numbers:last-of-type {
 	margin: 0;
 }
 
-.video ul.wpv-pagination-nav-links-container li a {
+.video ul.wpv-pagination-nav-links-container li a,
+.pagination--frogs .page-numbers {
 	border: 2px solid #58c7eb;
 	color: #58c7eb;
 	padding: 9px 15px;
 }
 
-.video ul.wpv-pagination-nav-links-container li.active span:before {
+.video ul.wpv-pagination-nav-links-container li.active span:before,
+.pagination--frogs .page-numbers.current:before {
 	content: 'Page';
 	display: inline-block;
 	font-family: 'Raleway', sans-serif;
@@ -4144,13 +4149,15 @@ nav.breadcrumbs span.breadcrumb_last {
 	margin: 0 5px 0 0;
 }
 
-.video ul.wpv-pagination-nav-links-container li.active {
+.video ul.wpv-pagination-nav-links-container li.active,
+.pagination--frogs .page-numbers.current {
 	background: #58c7eb;
 	color: #fff;
 	padding: 13px 15px;
 }
 
-.video ul.wpv-pagination-nav-links-container a {
+.video ul.wpv-pagination-nav-links-container a,
+.pagination--frogs .page-numbers {
 	color: #58c7eb;
 	text-decoration: none;
 	-webkit-transition: all 0.25s ease;
@@ -4160,7 +4167,8 @@ nav.breadcrumbs span.breadcrumb_last {
 	transition: all 0.25s ease;
 }
 
-.video ul.wpv-pagination-nav-links-container a:hover {
+.video ul.wpv-pagination-nav-links-container a:hover,
+.pagination--frogs .page-numbers:hover {
 	background: #58c7eb;
 	color: #fff;
 	-webkit-transition: all 0.25s ease;
@@ -7014,6 +7022,11 @@ you can add resource intensive styles.
 		width: 258px;
 		height: 233px;
 		background-size: normal;
+	}
+
+	.type-mcdivitt-frog a {
+		color: #58c7eb;
+		text-decoration: none;
 	}
 
 	.page-id-15407 .testimonial {

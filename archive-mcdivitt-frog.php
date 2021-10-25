@@ -1,5 +1,6 @@
 <?php
 get_header();
+	$bottom_frog_fields = get_field( 'bottom_frog_item', 15407 );
 ?>
 <div class="grid-container">
 	<div class="section-header">
@@ -22,35 +23,50 @@ get_header();
 					get_template_part( 'template-parts/content', 'mcdivitt-frog' );
 
 				endwhile;
+				?>
+				<?php if( $bottom_frog_fields ) { ?>
+				<div class="frog-item">
+					<div class="frog-item__left">
+					<a href="<?php echo get_post_type_archive_link( 'videos' ); ?>">
+						<?php if( $bottom_frog_fields['image'] ) { ?>
+							<?php echo wp_get_attachment_image( $bottom_frog_fields['image'],'medium', ['class' => 'frog-item__image']); ?>
+						<?php } ?>
 
-				the_posts_navigation();
+					</a>
+					</div>
+					<div class="frog-item__right">
+						<?php if( $bottom_frog_fields['title'] ) { ?>
+							<h4 class="frog-item__title"><?php echo $bottom_frog_fields['title']; ?></h4>
+						<?php
+						} ?>
+
+						<div class="frog-item__excerpt">
+							<?php if( $bottom_frog_fields['excerpt'] ) { ?>
+								<?php echo $bottom_frog_fields['excerpt']; ?>
+							<?php }
+							?>
+							<div class="blog">
+								<div class="blog-entry">
+									<div class="frog-item__button-container"><a class="frog-item__button" href="<?php echo get_post_type_archive_link( 'videos' ); ?>">Read More</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			<?php
+			} ?>
+
+			<?php the_posts_pagination( array( 'midsize' => 2, 'prev_next'=> false, 'class' => 'pagination--frogs' ) ); ?>
+			<?php
 
 			else :
 
 				get_template_part( 'template-parts/content', 'none' );
 
 			endif; wp_reset_postdata(); ?>
-			<div class="frog-item">
-				<div class="frog-item__left">
-				<?php if( has_post_thumbnail()) { ?>
-				<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">
-					<?php the_post_thumbnail('medium', ['class' => 'frog-item__image']); ?>
-				</a><?php } ?>
-				</div>
-				<div class="frog-item__right">
-					<h4 class="frog-item__title">Beyond the Frog
-					</h4>
-					<div class="frog-item__excerpt">
-						<p>It’s not all frogs and games here at McDivitt, we take our clients’ accidents and injuries very seriously. McDivitt Law Firm is here to help you get properly compensated after an accident by standing up to insurance companies on your behalf.</p>
-						<div class="blog">
-							<div class="blog-entry">
-								<div class="frog-item__button-container"><a class="frog-item__button" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">Read More</a></div>
-							</div>
-						</div>
-					</div>
-				</div>
 
-			</div>
+
 
 			</main><!-- #main -->
 		</div><!-- #primary -->

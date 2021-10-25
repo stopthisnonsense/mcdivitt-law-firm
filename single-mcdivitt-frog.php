@@ -1,5 +1,7 @@
 <?php
 get_header();
+
+$frog_subtitle = get_field( 'frog_subtitle' );
 ?>
 
 <nav class="breadcrumbs">
@@ -18,6 +20,10 @@ get_header();
   		while ( have_posts() ) : the_post(); ?>
 		  <div class="mcribbit-intro">
 		  	<h1><?php the_title(); ?></h1>
+			  <?php if( $frog_subtitle ) { ?>
+				<p><?= $frog_subtitle; ?></p>
+			<?php
+			  } ?>
 			  <div class="frog"></div>
 		  </div>
 
