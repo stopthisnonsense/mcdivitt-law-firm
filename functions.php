@@ -282,3 +282,28 @@ function shortcode_pageURL () {
 	return 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 }
 add_shortcode('page_url_sc', 'shortcode_pageURL');*/
+
+
+// Our custom post type function
+function create_frog_posttype() {
+
+    register_post_type( 'mcdivitt-frog',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'McDivitt Frog Posts' ),
+                'singular_name' => __( 'McDivitt Frog Post' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+			'public' => true,
+            'rewrite' => array('slug' => 'mcdivitt-frog'),
+            'show_in_rest' => true,
+			'menu_position' => 5,
+        )
+    );
+
+	add_post_type_support( 'mcdivitt-frog', 'thumbnail' );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_frog_posttype' );
